@@ -1,7 +1,7 @@
 # React + TypeScript + Vite
 
 
-### 1. git clone
+### 1. Git clone
 ```bash
 git clone https://github.com/Fronik123/usense-weather.git
 cd usense-weather
