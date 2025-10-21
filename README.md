@@ -4,6 +4,7 @@
 ### 1. git clone
 ```bash
 git clone https://github.com/Fronik123/usense-weather.git
+cd usense-weather
 ```
 
 ### 2. Go to root folder .env and and add url weather and key
