@@ -1,0 +1,29 @@
+.weatherCard {
+  margin-top: 16px;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  transition: 0.3s;
+  color: white;
+}
+
+.sunny {
+  background: linear-gradient(180deg, #ffed85, #f9d423);
+  color: black;
+}
+
+.cloudy {
+  background: linear-gradient(180deg, #bdc3c7, #2c3e50);
+}
+
+.rain {
+  background: linear-gradient(180deg, #667db6, #0082c8);
+}
+
+.snow {
+  background: linear-gradient(180deg, #e0eafc, #cfdef3);
+}
+
+.default {
+  background: #888;
+}
