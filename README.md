@@ -1,5 +1,22 @@
 # React + TypeScript + Vite
 
+
+### 1. git clone
+```bash
+git clone https://github.com/Fronik123/usense-weather.git
+```
+
+### 2. Go to root folder .env and and add url weather and key
+```bash
+VITE_API_KEY=YOUR_KEY
+VITE_BASE_URL=https://api.openweathermap.org/data/2.5
+```
+
+### 3. Run start
+```bash
+npm run dev
+```
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
