@@ -5,9 +5,10 @@
 ```bash
 git clone https://github.com/Fronik123/usense-weather.git
 cd usense-weather
+npm install
 ```
 
-### 2. Go to root folder .env and and add url weather and key
+### 2. Go to root folder add file .env and add url weather and your key
 ```bash
 VITE_API_KEY=YOUR_KEY
 VITE_BASE_URL=https://api.openweathermap.org/data/2.5
