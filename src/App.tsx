@@ -1,18 +1,17 @@
-import { useState } from "react";
-
 import "./App.css";
 import { useWeather } from "./hooks/useWeather";
 import WeatherCard from "./component/WeatherCard/WeatherCard";
 import { CustomButton } from "./component/ui/Button/CustomButton";
 import { CustomInput } from "./component/ui/Input/CustomInput";
+import { useWeatherStore } from "./store/useWeatherStore";
 
 function App() {
-  const [city, setCity] = useState("");
-  const { weather, error, fetchWeather } = useWeather();
+  const { city, setCity } = useWeatherStore();
+  const { data, isLoading, error, refetch } = useWeather(city);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    fetchWeather(city);
+    refetch();
   };
 
   return (
@@ -32,8 +31,9 @@ function App() {
         <CustomButton buttonText="Показати" />
       </form>
 
-      {error && <p className="error">{error}</p>}
-      {weather && <WeatherCard weather={weather} />}
+      {isLoading && <p>Loading...</p>}
+      {error && <p className="error">{error.name}</p>}
+      {data && <WeatherCard weather={data} />}
     </div>
   );
 }

@@ -5,6 +5,11 @@ export interface WeatherData {
   wind: WeatherWind;
 }
 
+export interface WeatherStore {
+  city: string;
+  setCity: (city: string) => void;
+}
+
 export interface WeatherCondition {
   main: string;
   description: string;
