@@ -24,3 +24,12 @@ export interface WeatherMain {
   temp: number;
   humidity: number;
 }
+
+export const WeatherType = {
+  Clear: "Clear",
+  Rain: "Rain",
+  Snow: "Snow",
+  Clouds: "Clouds",
+} as const;
+
+export type WeatherType = (typeof WeatherType)[keyof typeof WeatherType];

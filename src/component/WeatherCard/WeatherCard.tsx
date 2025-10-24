@@ -1,5 +1,5 @@
 import React from "react";
-import type { WeatherData } from "../../types/weather";
+import { WeatherType, type WeatherData } from "../../types/weather";
 import styles from "./WeatherCard.module.css";
 
 interface Props {
@@ -13,16 +13,16 @@ const WeatherCard: React.FC<Props> = ({ weather }) => {
 
   let weatherClass = styles.default;
   switch (weatherMain) {
-    case "Rain":
+    case WeatherType.Rain:
       weatherClass = styles.rain;
       break;
-    case "Snow":
+    case WeatherType.Snow:
       weatherClass = styles.snow;
       break;
-    case "Clear":
+    case WeatherType.Clear:
       weatherClass = styles.sunny;
       break;
-    case "Clouds":
+    case WeatherType.Clouds:
       weatherClass = styles.cloudy;
       break;
     default:
