@@ -7,9 +7,8 @@ interface Props {
 }
 
 const WeatherCard: React.FC<Props> = ({ weather }) => {
-  const { name, main, weather: info, wind } = weather;
-  const { description, icon } = info[0];
-  const weatherMain = info[0].main;
+  const { name, temp, weather: weatherArray, humidity, wind } = weather;
+  const { main: weatherMain, description, icon } = weatherArray[0];
 
   let weatherClass = styles.default;
   switch (weatherMain) {
@@ -38,9 +37,9 @@ const WeatherCard: React.FC<Props> = ({ weather }) => {
         alt={description}
       />
 
-      <p>{Math.round(main.temp)}°C</p>
+      <p>{Math.round(temp)}°C</p>
       <p>Погода: {description}</p>
-      <p>Вологість: {main.humidity}%</p>
+      <p>Вологість: {humidity}%</p>
       <p>Вітер: {wind.speed} м/с</p>
     </div>
   );

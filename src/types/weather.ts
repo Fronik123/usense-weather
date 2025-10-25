@@ -1,8 +1,9 @@
 export interface WeatherData {
   name: string;
-  main: WeatherMain;
   weather: WeatherCondition[];
   wind: WeatherWind;
+  temp: number;
+  humidity: number;
 }
 
 export interface WeatherStore {
@@ -18,11 +19,6 @@ export interface WeatherCondition {
 
 export interface WeatherWind {
   speed: number;
-}
-
-export interface WeatherMain {
-  temp: number;
-  humidity: number;
 }
 
 export const WeatherType = {
